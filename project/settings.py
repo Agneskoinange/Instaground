@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'app',
     'bootstrap3',
     'tinymce',
+    'registration',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -111,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Nairobi'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
