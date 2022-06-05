@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'bootstrap3',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'instagram',
         'USER': 'nessie',
-    'PASSWORD':'agnes1234',
+        'PASSWORD':'agnes1234',
     }
 }
 
