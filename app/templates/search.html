@@ -1,4 +1,7 @@
-{%extends 'base.html'%} {% block content %}
+{%extends 'base.html'%} 
+
+
+{% block content %}
 <div class="container">
 
   <div class="row">
@@ -50,7 +53,7 @@
       <img src="{{image.image.url}}" data-toggle="modal" alt="" style="height:600px;width:500px;">
       <div class="modal-header">
         <h4 id="modal-text text-center">{{image.name}}</h4>
-        <h4 style="font-family: 'Kodchasan', sans-serif;color:blue;" id="modal-text ">{{image.location}}</h4>
+        <h4 style="font-family: 'Kodchasan', sans-serif;color: rgb(38, 38, 38)" id="modal-text ">{{image.location}}</h4>
         {% for tag in image.tags.all %}
 
         <button class="btn btn-lg btn-success" style="font-family: 'Kodchasan', sans-serif;color:white;"> #{{ tag.name }}</button>

@@ -1,0 +1,42 @@
+{% extends 'registration/base.html' %}
+{% block content %}
+<div class="container-fluid" style="background-color:white;">
+    <div class="row" id="main">
+        <div class="col-sm-6 col-md-6">
+            <div id="demo">
+                <img src="https://images.pexels.com/photos/534273/pexels-photo-534273.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="" class="img-responsive" style="height:600px;">
+            </div>
+            <div class="col-sm-6 col-md-6" id="demopic">
+
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6">
+            <div class="card w-75" id="login">
+                <div class="card-body">
+                    <h4 class="card-title" id="logo" style="color: rgb(38, 38, 38);">Instaground</h4>
+                    <div class="row">
+                        <div class="col-sm-1 col-md-1" style="margin-top: 7%;">
+                        </div>
+                        <div class="col-sm-10 col-md-10" style="margin-top: 7%;">
+                                <a href="/accounts/login" class="btn btn-primary">Log In</a>
+                            <h5 style="margin-top:10%; color: #000;">Don't have an account? <a href="/accounts/register" style="color:rgb(49,151,246);">Sign up</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="buybutton">
+                <p>Get the app.</p>
+                <div class="col-sm-4 col-md-4" class="btn">
+                    <img src="https://speedify.com/wp-content/uploads/App_Store_Badge_EN.png" alt="" class="img-responsive">
+                </div>
+                <div class="col-sm-4 col-md-4" class="btn">
+                    <img src="https://play.google.com/intl/en/badges/images/generic/en_badge_web_generic.png" alt=""
+                        class="img-responsive">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{%  endblock %}

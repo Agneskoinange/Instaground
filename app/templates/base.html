@@ -7,7 +7,7 @@
   <title> Image Gallery - {{title}}</title>
   {% else %}
   <title> The Image Gallery </title>
-  {% endif %} {% block styles %} {% bootstrap_css %}
+  {% include "navbar.html" %} {% endif %} {% block styles %} {% bootstrap_css %}
   <link rel="stylesheet" href="{% static 'css/baseimages.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  {% include "navbar.html" %} {% block content %}
+  {% block content %}
   <h1 class='text-center'> Images </h1> {%endblock%}
   {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

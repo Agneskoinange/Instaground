@@ -13,6 +13,23 @@ a{
     font-size: 30px;
     
     }
+
+    #main {
+        padding-top:3%;
+    }
+    
+
+    #demopic {
+        background-color: #131413;
+        border-radius: 3%;
+        border: solid 1px gray;
+        z-index:2;
+        height:80%;
+        margin-top: 10%;
+        margin-left:53%;
+        width:43.5%;
+    }
+    
     
     li {
         display: inline;

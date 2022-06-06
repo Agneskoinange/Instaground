@@ -1,6 +1,14 @@
-{% extends 'base.html' %} {% block title %}
+{% extends 'base.html' %} 
+
+
+{% block title %}
 <h2>List Of Users</h2>
-{% endblock %} {% block content %} {% if user_list %}
+{% endblock %}
+
+
+{% block content %} 
+
+{% if user_list %}
 <div class="row">
     {% for user in user_list %}
     <div class="col-xs-6 col-lg-4">
