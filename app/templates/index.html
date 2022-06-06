@@ -19,20 +19,20 @@
 
 <div class="container">
 
-  <div class="card-columns">
+  <div class="row">
 
     {% for image in pictures %}
-    <div class="card border-secondary"><a href="{% url 'image' image.id %}">
+    <div class="offset-3 col-md-6 card border-secondary" style="margin-bottom:20px ;"><a href="{% url 'image' image.id %}">
         <img src="{{image.image.url}}" data-target="#imageModal{{image.id}}" data-toggle="modal" alt="" class="img-fluid" id="eachimage"
           size="100px200"></a>
- <p style="font-family: 'Oswald', sans-serif;"> Caption : {{ image.description}}</p>
+        <p style="font-family: 'Oswald', sans-serif;"> Caption : {{ image.description}}</p>
       <p style="font-family: 'Oswald', sans-serif;">Posted by : {{ image.user}}</p>
 
     </div>
     {% endfor %}
   </div>
 </div>
-<div class="jumbotron text-center mt-0" style="background-color:white;">
+<div class="text-center mt-0" style="background-color:white;">
 
   <form  action="{%url 'homePage'%}" method="post">
     {%csrf_token%}
