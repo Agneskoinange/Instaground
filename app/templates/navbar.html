@@ -6,11 +6,10 @@
     <div class="navbar-header">
         <a class="navbar-brand" href="{% url 'homePage' %}"><img src="{% static 'photos/instagram_logo.webp' %}" style="height:30px;width:36px;">
       </a>
-      <a class="navbar-brand" id="victor" href="{% url 'homePage' %}">Instaground
+      <a class="navbar-brand" id="logoname" href="{% url 'homePage' %}">Instaground
       </a>
     </div>
 
-    <!-- Adding a search form  -->
     <div class="col-sm-4 col-md-4 navbar-right">
 
       <form class="navbar-form" role="search" action="{% url 'search_users' %}">
@@ -24,8 +23,7 @@
 
       </form>
     </div>
-    <!-- search form end -->
-
+    
     <div class="col-sm-6 col-md-6">
       {% if user.is_authenticated %}
 
@@ -50,8 +48,8 @@
       </li>
 
       {% else %}
-      <li class="mr-auto p-2">
-        <a class='btn btn-default' href="/accounts/login">Login</a>
+      <li class="mr-auto">
+        <a class='btn btn-default' style="margin-left: 500px;" href="/accounts/login">Login</a>
       </li>
 
       <li >
