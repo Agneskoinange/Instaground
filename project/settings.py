@@ -5,17 +5,14 @@ import cloudinary.uploader
 import cloudinary.api
 import django_heroku
 # from decouple import config
+CSRF_TRUSTED_ORIGINS = ['https://heroku.com']
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-CSRF_TRUSTED_ORIGINS = ['https://heroku.com','https://*.127.0.0.1']
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY='instaground1234'
@@ -75,7 +72,6 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
@@ -90,7 +86,7 @@ DATABASES = {
         'NAME': 'instagram',
         'USER': 'nessie',
         'PASSWORD': 'agnes1234',
-        'PORT': '5432',
+        'PORT': '',
     }
 }
 
@@ -139,12 +135,18 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# adding config
 cloudinary.config( 
   cloud_name = "dopvdc9a1", 
   api_key = "392671715629863", 
   api_secret = "arHv5ZYdNf0Z8biPJ7gCSuHKXxU" 
 )
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())

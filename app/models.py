@@ -61,7 +61,7 @@ class tags(models.Model):
 
 
 class Image(models.Model):
-    image=models.ImageField(upload_to='picture/', )
+    image=models.ImageField(upload_to='picture/', null="True", blank="True")
     name = models.CharField(max_length=40)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="images")
     description=models.TextField()
@@ -69,7 +69,8 @@ class Image(models.Model):
     tags=models.ManyToManyField(tags, blank=True)
     likes = models.IntegerField(default=0)
     comments= models.TextField(blank=True)
-    image = CloudinaryField('image')
+    image = CloudinaryField('image', default='DEFAULT VALUE')
+
     def __str__(self):
         return self.name
     def save_image(self):
