@@ -89,8 +89,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'instagram',
         'USER': 'nessie',
-        'PASSWORD':'agnes1234',
-        'PORT': '',
+        'PASSWORD': 'agnes1234',
+        'PORT': '5432',
     }
 }
 
