@@ -10,30 +10,29 @@
 <div class="offset-2 card row mb-3" style="width:40rem;;">
   <img class="card-img-top" src="{{image.image.url}}" alt="Card image cap" class="img-fluid" size="100px200">
   <div class="card-body">
-    <button class="btn btn-lg btn-danger">Like This Image</button>
+    <a href="#" class="btn btn-info btn">
+      <span class="glyphicon glyphicon-thumbs-up"></span> Like {{image.likes}}
+    </a>
     <!--*****************-->
     <!--TESTING LIKE BUTTON-->
 
-    <a href="#" onClick="document.getElementById('likebutton').submit()">Like This Post</a> {{image.likes}}
-
+    <a href="#" onClick="document.getElementById('likebutton').submit()" class="btn btn-info btn; glyphicon glyphicon-thumbs-down" >Unlike {{image.likes}}</a> 
+    
 <form id="likebutton" method="POST" action="/posts/{{image.id}}/preference/1/">
 {% csrf_token %}
 <input type="hidden">
 </form>
 
-
-    <!--********************-->
-
-    <h5 class="card-title" style="font-family: 'Oswald', sans-serif;"><strong>Name Of Image:</strong>
+    <h5 class="card-title"><strong>Name Of Image:</strong>
       <br>
       {{image.name}}</h5>
-    <p class="card-text" style="font-family: 'Oswald', sans-serif;"><strong>Location:</strong>
+    <p class="card-text"><strong>Location:</strong>
       <br>
       {{image.location}}</p>
-    <p class="card-text" style="font-family: 'Oswald', sans-serif;"><strong>Caption:</strong>
+    <p class="card-text" ><strong>Caption:</strong>
       <br>
       {{image.description}}</p>
-    <p class="card-text" style="font-family: 'Oswald', sans-serif;"><small class="text-muted">Posted by {{image.user}}</small></p>
+    <p class="card-text" ><small class="text-muted">Posted by {{image.user}}</small></p>
   </div>
 
   <div class="card border-secondary">

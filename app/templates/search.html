@@ -6,18 +6,18 @@
 
   <div class="row">
     {% if profiles %}
-    <h2 style="font-family: 'Kodchasan', sans-serif;color:white;"> Here are profiles of your search term: {{message}}</h2>
+    <h2 > Here are profiles of your search term: {{message}}</h2>
     {% else %}
-    <h2 style="font-family: 'Kodchasan', sans-serif;color:white;"> It appears that there are 0 profiles for your search term
+    <h2 > It appears that there are 0 profiles for your search term
       {{message}}, please try again. </h2>
     {% endif %}
 
   </div>
 
-  <h1 style="font-family: 'Oswald', sans-serif;"><strong> These are the user profiles found </strong></h1>
+  <h1 ><strong> These are the user profiles found </strong></h1>
 
   {% for profile in profiles %}
-  <p style="font-family: 'Oswald', sans-serif;"><a href="{% url 'individual_profile_page' profile.user.id %}"> {{profile.user.username}}</a></p>
+  <p ><a href="{% url 'individual_profile_page' profile.user.id %}"> {{profile.user.username}}</a></p>
   {% endfor %}
 
 
